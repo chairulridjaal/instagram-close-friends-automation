@@ -26,12 +26,14 @@ This script is for educational purposes only. Use it responsibly and in accordan
 ## Installation
 
 1. Clone this repository:
+
 ```bash
 git clone https://github.com/yourusername/instagram-close-friends-automation.git
 cd instagram-close-friends-automation
 ```
 
 2. Install required dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -39,6 +41,7 @@ pip install -r requirements.txt
 ## Setup
 
 1. Prepare your CSV file (`output.csv`) with the following format:
+
 ```csv
 username
 user1
@@ -51,6 +54,7 @@ user3
 ## Usage
 
 1. Run the script:
+
 ```bash
 python instagram_bot_simple.py
 ```
@@ -80,6 +84,7 @@ WAIT_TIME = 10                   # Seconds to wait for page elements
 ### Human-like Behavior
 
 The script includes several features to mimic human behavior:
+
 - **Randomized delays**: 2.5-6.5 seconds between actions
 - **Cooldown periods**: 30-90 second breaks every 8-12 actions
 - **Anti-detection measures**: Removes automation indicators
@@ -97,15 +102,18 @@ The script includes several features to mimic human behavior:
 ## Troubleshooting
 
 ### Browser not found
+
 - Make sure Brave Browser is installed in the default location
 - The script will automatically fall back to Chrome if Brave is not found
 
 ### Search input not found
+
 - Instagram's UI may have changed
 - Try waiting a few seconds and running again
 - Check if you're still logged in
 
 ### Users not being added
+
 - Verify the usernames are correct in your CSV
 - Check if the users exist on Instagram
 - Ensure you have permission to add them to Close Friends
