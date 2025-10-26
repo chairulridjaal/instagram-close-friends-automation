@@ -15,6 +15,7 @@ This script is for educational purposes only. Use it responsibly and in accordan
 - 🔒 Manual login for security
 - 📈 Progress tracking and summary statistics
 - ✅ Duplicate username prevention
+- 🔄 JSON to CSV converter utility (for Instagram data exports)
 
 ## Prerequisites
 
@@ -39,6 +40,22 @@ pip install -r requirements.txt
 ```
 
 ## Setup
+
+### Option 1: Using Instagram Data Export
+
+If you have an Instagram data export with a `followers_1.json` file:
+
+1. Place your `followers_1.json` file in the same directory as the scripts
+
+2. Run the JSON to CSV converter:
+
+```bash
+python jsoncsv.py
+```
+
+3. This will create `output.csv` with all usernames from your JSON file
+
+### Option 2: Manual CSV Creation
 
 1. Prepare your CSV file (`output.csv`) with the following format:
 
@@ -93,9 +110,12 @@ The script includes several features to mimic human behavior:
 
 ```
 .
-├── instagram_bot_simple.py    # Main script
-├── output.csv                 # Input file with usernames
+├── instagram_bot_simple.py    # Main automation script
+├── jsoncsv.py                 # Utility to convert Instagram JSON export to CSV
+├── output.csv                 # Input file with usernames (generated or manual)
+├── example.csv                # Example CSV format
 ├── requirements.txt           # Python dependencies
+├── LICENSE                    # MIT License
 └── README.md                  # This file
 ```
 
@@ -118,6 +138,12 @@ The script includes several features to mimic human behavior:
 - Check if the users exist on Instagram
 - Ensure you have permission to add them to Close Friends
 
+### JSON file format issues
+
+- Make sure your `followers_1.json` is from an official Instagram data export
+- The file should contain a list of objects with `string_list_data` fields
+- If the conversion fails, check the JSON structure matches Instagram's export format
+
 ## Safety Features
 
 - ✅ Manual login (no password storage)
@@ -131,22 +157,9 @@ The script includes several features to mimic human behavior:
 - `selenium` - Web browser automation
 - `webdriver-manager` - Automatic ChromeDriver management
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Built with Selenium WebDriver
-- Uses webdriver-manager for easy driver management
-
-## Support
-
-If you encounter any issues or have questions, please open an issue on GitHub.
 
 ---
 
